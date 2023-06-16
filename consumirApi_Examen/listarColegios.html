@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Lista Colegios</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Colegios</h3>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>
+                        Dirección
+                    </th>
+                    <th>
+                        Latitud
+                    </th>
+                    <th>
+                        Longitud
+                    </th>
+                    <th>
+                        Descripción
+                    </th>
+                    <th>
+                        Fecha
+                    </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="listaColegios">
+            </tbody>
+        </table>
+        <br>
+        <a href="./registrarColegio.html"><button class="btn waves-effect waves-light" type="button"
+                name="action">Agregar Colegio
+                <i class="material-icons right"></i>
+            </button></a>
+    </div>
+
+    <!-- Modal Trigger -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="container">
+                <h3>Editar Colegio</h3>
+                <div class="col s12">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="hidden" id="_id" class="validate">
+                                <input id="direccion" name="direccion" type="text" class="validate">
+                                <label for="direccion">Dirección</label>
+                            </div>
+                            <div class="input-field col s12">
+                                
+                                <input id="latitud" name="latitud" type="number" step="any" class="validate">
+                                <label for="latitud">Latitud</label>
+                            </div>
+                            <div class="input-field col s12">
+                                
+                                <input id="longitud" name="longitud" type="number" step="any" class="validate">
+                                <label for="longitud">Longitud</label>
+                            </div>
+                            <div class="input-field col s12">
+                                
+                                <input id="descripcion" name="descripcion" type="text" class="validate">
+                                <label for="descripcion">Confirmar Contraseña</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button class="btn waves-effect waves-light" type="button" id="btn-actualizarColegio" name="action">Actualizar
+                    <i class="material-icons right"></i>
+                </button>
+            </div>
+            <script src="js/funciones.js"></script>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            //var instances = M.Modal.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
+    <script src="js/funciones.js"></script>
+</body>
+
+</html>
