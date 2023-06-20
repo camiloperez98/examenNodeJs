@@ -68,7 +68,7 @@ const editarColegio = (colegio) =>{
 
 const actualizarColegio = async () =>{
     let direccion = document.getElementById('direccion').value
-    let latitud = document.getElementById('latitus').value
+    let latitud = document.getElementById('latitud').value
     let longitud = document.getElementById('longitud').value
     let descripcion = document.getElementById('descripcion').value
 
